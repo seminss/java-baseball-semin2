@@ -1,4 +1,4 @@
-package baseball;
+package baseball.view;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
@@ -26,13 +26,13 @@ public class InputView {
     }
 
 
-    public void isNum(String user_input) {
+    private void isNum(String user_input) {
         try {
             boolean contains = user_input.contains("0");
             if (contains){
                 throw new IllegalArgumentException("error"); //숫자에 0이 포함되어 있으면 throw
             }
-            int i1 = Integer.parseInt(user_input); //parseInt 로 숫자 변환이 안되면 throw ->catch
+            int num = Integer.parseInt(user_input); //parseInt 로 숫자 변환이 안되면 throw ->catch
         }catch (Exception e){
             throw new IllegalArgumentException("error");
         }
